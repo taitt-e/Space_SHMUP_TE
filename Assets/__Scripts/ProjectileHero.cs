@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class ProjectileHero : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private BoundCheck bndCheck;
 
+    void Awake()
+    {
+        bndCheck = GetComponent<BoundsCheck>();
+    }
     // Update is called once per frame
     void Update()
     {
-        
+        if (bndCheck.LocIs(BoundsCheck.eScreenLocs.offUp))
+        {
+            Destroy(gameObject);
+        }   
     }
 }
