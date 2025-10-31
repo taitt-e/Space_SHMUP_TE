@@ -373,6 +373,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4064808794706227433, guid: fa3d2a7b58606344a82873e7e4e91c74, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 2756681096282821711, guid: 8716e990e6c59b7499f428a8f0fa14b8, type: 3}
     - target: {fileID: 4064808794706227434, guid: fa3d2a7b58606344a82873e7e4e91c74, type: 3}
       propertyPath: m_Name
       value: _Hero
