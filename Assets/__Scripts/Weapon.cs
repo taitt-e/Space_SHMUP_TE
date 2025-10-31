@@ -28,6 +28,8 @@ public class WeaponDefinition
     [Tooltip("Prefab of Weapon model that is attached to the Player Ship")]
     public GameObject weaponModelPrefab;
     [Tooltip("Prefab of projectile that is fired")]
+    public GameObject projectilePrefab;
+    [Tooltip("Color of the Projectile that is fired")]
     public Color projectileColor = Color.white;
     [Tooltip("Damage casued when a single Projectile hits an Enemy")]
     public float damageOnHit = 0;
