@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProjectileHero : MonoBehaviour
 {
-    private BoundCheck bndCheck;
+    private BoundsCheck bndCheck;
 
     void Awake()
     {
