@@ -43,6 +43,6 @@ public class Enemy_1 : Enemy // Enemy_1 extends the Enemy class
         //base.Move() still handles the movement down in y
         base.Move();
 
-        //print(bndCheck.isOnScreen); // Leave this line commented out.
+        //print(bndCheck.isOnScreen);
     }
 }
