@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(BoundsCheck))]
 public class Enemy : MonoBehaviour
 {
     [Header("Inscribed")]
@@ -16,7 +17,7 @@ public class Enemy : MonoBehaviour
     {
         bndCheck = GetComponent<BoundsCheck>();
     }
-    
+
     // This is a Property: A method that acts like a field
     public Vector3 pos
     {
@@ -36,7 +37,7 @@ public class Enemy : MonoBehaviour
         //  Check whether this Enemy has gone off the bottom of the screen
         if (!bndCheck.LocIs(BoundsCheck.eScreenLocs.offDown))
         {
-            Destroy(gameObject);   
+            Destroy(gameObject);
         }
     }
     public virtual void Move()
@@ -56,7 +57,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            Debug.Log("Enemy hit by non-ProjectileHero" + otherGO.name); 
+            Debug.Log("Enemy hit by non-ProjectileHero" + otherGO.name);
         }
     }
 }
