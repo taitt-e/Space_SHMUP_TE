@@ -9,6 +9,13 @@ public class Enemy : MonoBehaviour
     public float fireRate = 0.3f; //    Seconds/shot (Unused)
     public float health = 10; //    Damage needed to destroy this enemy
     public int score = 100; //  Points earned for destroying this
+
+    private BoundsCheck bndCheck;
+
+    void Awake()
+    {
+        bndCheck = GetComponent<BoundsCheck>();
+    }
     
     // This is a Property: A method that acts like a field
     public Vector3 pos
@@ -26,6 +33,11 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         Move();
+        //  Check whether this Enemy has gone off the bottom of the screen
+        if (!bndCheck.LocIs(BoundsCheck.eScreenLocs.offDown))
+        {
+            Destroy(gameObject);   
+        }
     }
     public virtual void Move()
     {
