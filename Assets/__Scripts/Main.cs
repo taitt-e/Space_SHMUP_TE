@@ -34,7 +34,7 @@ public class Main : MonoBehaviour
         if (go.GetComponent<BoundsCheck>() != null)
         {
             enemyInset = Mathf.Abs(go.GetComponent<BoundsCheck>().radius);
-
+        }
             //Set the initial position for the spawned Enemy
             Vector3 pos = Vector3.zero;
             float xMin = -bndCheck.camWidth + enemyInset;
@@ -45,7 +45,6 @@ public class Main : MonoBehaviour
 
             //Invoke SpawnEnemy() again
             Invoke(nameof(SpawnEnemy), 1f / enemySpawnPerSecond);
-        }
     }
     void DelayedRestart()
     {

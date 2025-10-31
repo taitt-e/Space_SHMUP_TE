@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boundsType: 2
   radius: 2
-  keepOnScreen: 1
+  keepOnScreen: 0
   screenLocs: 0
   camWidth: 0
   camHeight: 0
@@ -96,6 +96,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841c9c954341aee4a8065dae2a03697a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  fireRate: 0.3
+  health: 10
+  score: 100
 --- !u!1001 &5450190822419779705
 PrefabInstance:
   m_ObjectHideFlags: 0
