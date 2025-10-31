@@ -424,6 +424,7 @@ GameObject:
   - component: {fileID: 1512540777}
   - component: {fileID: 1512540779}
   - component: {fileID: 1512540778}
+  - component: {fileID: 1512540780}
   m_Layer: 0
   m_Name: _Hero
   m_TagString: Untagged
@@ -480,6 +481,22 @@ MonoBehaviour:
   rollMult: -45
   pitchMult: 30
   shieldLevel: 1
+--- !u!114 &1512540780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512540776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c045d67069576664fa66b0587917d376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boundsType: 1
+  radius: 4
+  camWidth: 0
+  camHeight: 0
 --- !u!1001 &1661648181
 PrefabInstance:
   m_ObjectHideFlags: 0
