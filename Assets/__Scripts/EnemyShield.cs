@@ -19,7 +19,7 @@ public class EnemyShield : MonoBehaviour
         blinker.ignoreOnCollisionEnter = true;
 
         if (transform.parent == null) return;
-        EnemyShield shieldParent = transform.parent.GetCompnent<EnemyShield>();
+        EnemyShield shieldParent = transform.parent.GetComponent<EnemyShield>();
         if (shieldParent != null)
         {
             shieldParent.AddProtector(this);
@@ -40,7 +40,7 @@ public class EnemyShield : MonoBehaviour
     /// </summary>
     public bool isActive
     {
-        get { return gameObject.activeInhierarchy; }
+        get { return gameObject.activeInHierarchy; }
         private set { gameObject.SetActive(value); }
     }
 

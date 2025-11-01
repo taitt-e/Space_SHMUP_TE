@@ -53,7 +53,7 @@ public class BlinkColorOnHit : MonoBehaviour
     /// Sets the Albedo color (i.e, the main color) of all materials in the materials array to blinkColor,
     /// sets showingColor to true, and sets the time that the colors should be reverted.
     /// </summary>
-    void SetColors()
+    public void SetColors()
     {
         foreach (Material m in materials)
         {
