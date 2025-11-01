@@ -13,6 +13,7 @@ public class Hero : MonoBehaviour
     public float pitchMult = 30;
     public GameObject projectilePrefab;
     public float projectileSpeed = 40;
+    public Weapon[] weapons;
 
     [Header("Dynamic")]
     [Range(0, 4)]
