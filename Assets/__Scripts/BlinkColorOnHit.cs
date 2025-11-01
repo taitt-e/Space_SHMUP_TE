@@ -10,6 +10,7 @@ public class BlinkColorOnHit : MonoBehaviour
     [Header("Dynamic")]
     public bool showingColor = false;
     public float blinkCompleteTime; // Time to stop showing the color
+    public bool ignoreOnCollisionEnter = false;
 
     private Material[] materials; // Allthe Materials of this & its children
     private Color[] originalColors;
@@ -22,9 +23,24 @@ public class BlinkColorOnHit : MonoBehaviour
 
         materials = Utils.GetAllMaterials(gameObject);
         originalColors = new Color[materials.Length];
-        for(int i = 0; i < materials.Length; i++)
+        for (int i = 0; i < materials.Length; i++)
         {
             originalColors[i] = materials[i].color;
+        }
+    }
+    
+    void OnCollisionEnter(Collision coll)
+    {
+        if (ignoreOnCollisionEnter) return;
+        // Check for collision with ProjectileHero
+        ProjectileHero p = coll.gameObject.GetComponent<ProjectileHero>();
+        if(p != null)
+        {
+            if (bndCheck != null && !bndCheck.isOnScreen)
+            {
+                return; // Don't show damage if this is off screen.
+            }
+            SetColors();
         }
     }
     // Update is called once per frame
