@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlindColorOnHit : MonoBehaviour
+public class BlinkColorOnHit : MonoBehaviour
 {
     private static float blinkDuration = 0.1f; // # seconds to show damage
     private static Color blinkColor = Color.red;
