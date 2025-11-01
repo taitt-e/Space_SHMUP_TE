@@ -11,7 +11,7 @@ public class Utils : MonoBehaviour
     /// </summary>
     /// <param name="u">The amount of interpolation [0..1] </param>
     /// <param name="points"> An array of Vector3s to interpolate</param> 
-    
+
     static public Vector3 Bezier(float u, params Vector3[] points)
     {
         // Set up the array
@@ -36,6 +36,26 @@ public class Utils : MonoBehaviour
         return vArr[0, 0];
     }
     
+    //== Materials Functions ==========================================================\\
+
+    /// <summary>
+    /// Returns a list of all Materials on this GameObject and its childer
+    /// </summary>
+    /// <param name="go">The GameObject on which to search for Renderers</param>
+     
+    static public Material[] GetAllMaterials(GameObject go)
+    {
+        Renderer[] rends = go.GetComponentsInChildren<Renderer>();
+
+        Material[] mats = new Material[rends.Length];
+        for (int i = 0; i < rends.Length; i++)
+        {
+            mats[i] = rends[i].material;
+        }
+
+        return mats;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
