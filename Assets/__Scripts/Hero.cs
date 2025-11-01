@@ -82,15 +82,30 @@ public class Hero : MonoBehaviour
         lastTriggerGo = go;
 
         Enemy enemy = go.GetComponent<Enemy>();
+        PowerUp pUp = go.GetComponent<PowerUp>();
         if (enemy != null)   //If the shield was triggered by an enemy
         {   //Decrease the level of the shield by 1
             shieldLevel--;
             Destroy(go);    //... and Destroy the enemy
         }
+        else if (pUp != null)
+        { // If the shield hit a powerup
+            AbsorbPowerUp(pUp); // absorb the powerUp
+        }
         else
         {
             Debug.LogWarning("Shield trigger hit by non-Enemy: " + go.name);
         }
+    }
+    
+    public void AbsorbPowerUp(PowerUp pUp)
+    {
+        Debug.Log("Absorbed PowerUp: " + pUp.type);
+        switch (pUp.type)
+        {
+            // Leave this switch block empty for now
+        }
+        pUp.AbsorbedBy(this.gameObject);
     }
 
     public float shieldLevel
