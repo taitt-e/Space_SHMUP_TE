@@ -60,6 +60,7 @@ public class Weapon : MonoBehaviour
         {
             GameObject go = new GameObject("_ProjectileAnchor");
             PROJECTILE_ANCHOR = go.transform;
+            PROJECTILE_ANCHOR.transform.SetSiblingIndex(3);
         }
 
         shotPointTrans = transform.GetChild(0);
